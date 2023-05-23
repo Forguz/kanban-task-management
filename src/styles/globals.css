@@ -1,6 +1,23 @@
 :root {
   --font-family: var(--plus-jakarta);
   --body-background-color: #f4f7fd;
+  --background-color: #ffffff;
+
+  /* catch-eye colors */
+  --primary-color: #635fc7;
+  --danger-color: #ea5555;
+
+  /* fonts */
+  --info-font-color: #828fa3;
+  --font-color: #000112;
+
+  --heading-xl: 2.4rem;
+  --heading-l: 1.8rem;
+  --heading-m: 1.5rem;
+  --heading-s: 1.2rem;
+
+  --body-l: 13rem;
+  --body-m: 12rem;
 }
 
 * {
@@ -14,6 +31,15 @@ body {
   font-family: var(--font-family);
   background-color: var(--body-background-color);
   overflow-x: hidden;
+  font-size: 10px;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border: none;
 }
 
 a {
