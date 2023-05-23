@@ -1,13 +1,52 @@
 .button {
   background-color: var(--primary-color);
   color: var(--background-color);
+  font-size: var(--heading-m);
   font-weight: 700;
+  display: flex;
+  align-items: center;
   border-radius: 24px;
-  padding-block: 14px;
+  padding-block-start: 16px;
+  padding-block-end: 15px;
   padding-inline: 18px;
+  transition: background-color 0.15s ease;
+}
+
+.button:hover {
+  background-color: #a8a4ff;
 }
 
 .button:disabled,
 .button[disabled] {
   opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.button:disabled:hover,
+.button[disabled]:hover {
+  background-color: var(--primary-color);
+}
+
+.iconButton {
+  padding-block: 8px;
+  padding-inline: 16px;
+}
+
+.lightButton {
+  background-color: #635fc71a;
+  color: var(--primary-color);
+}
+
+.lightButton:hover {
+  background-color: rgba(99, 95, 199, 0.25);
+}
+
+.lightButton:disabled:hover,
+.lightButton[disabled]:hover {
+  background-color: #635fc71a;
+}
+
+.svg {
+  width: 16px;
+  height: 16px;
 }
