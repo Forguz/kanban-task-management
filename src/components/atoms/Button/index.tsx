@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from 'react';
 import { IconType } from 'react-icons';
-import styles from './styles.module.css';
+import styles from './button.module.css';
 import { Atom } from '@/types/components';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {

@@ -24,6 +24,13 @@ describe('Button', () => {
     expect(svg).toBeInTheDocument();
   });
 
+  it('should render lightButton', () => {
+    const { getByRole } = render(<Button light onClick={() => ({})} />);
+    const button = getByRole('button');
+
+    expect(button.classList[1]).toEqual('lightButton');
+  });
+
   it('should trigger function on click event', () => {
     const handleClick = jest.fn();
     const { getByRole } = render(
