@@ -1,12 +1,11 @@
 import { useArgs } from '@storybook/preview-api';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Switch } from './index';
+import { Switch } from '@/components/atoms/Switch';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof Switch> = {
-  title: 'Example/Switch',
+  title: 'Atoms/Switch',
   component: Switch,
-  tags: ['autodocs'],
   decorators: [
     function Component(Story, ctx) {
       const [, setArgs] = useArgs<typeof ctx.args>();

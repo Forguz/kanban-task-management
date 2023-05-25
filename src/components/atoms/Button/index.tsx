@@ -1,15 +1,6 @@
-import { ButtonHTMLAttributes } from 'react';
-import { IconType } from 'react-icons';
 import styles from './button.module.css';
-import { Atom } from '@/types/components';
-
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  onClick: () => void;
-  light?: boolean;
-  label?: string;
-  Icon?: IconType;
-  ariaLabel?: string;
-}
+import type { Atom } from '@/types/components';
+import type { ButtonProps } from './button.types';
 
 export function Button({
   onClick,
@@ -19,7 +10,7 @@ export function Button({
   disabled,
   ariaLabel = 'Button',
   name = 'Button',
-}: Props): Atom {
+}: ButtonProps): Atom {
   let finalStyles = styles.button;
 
   if (Icon && !label) {

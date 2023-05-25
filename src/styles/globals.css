@@ -10,14 +10,15 @@
   /* fonts */
   --info-font-color: #828fa3;
   --font-color: #000112;
+  --placeholder-color: #00011440;
 
   --heading-xl: 2.4rem;
   --heading-l: 1.8rem;
   --heading-m: 1.5rem;
   --heading-s: 1.2rem;
 
-  --body-l: 13rem;
-  --body-m: 12rem;
+  --body-l: 1.3rem;
+  --body-m: 1.2rem;
 }
 
 * {

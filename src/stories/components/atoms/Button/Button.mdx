@@ -1,0 +1,20 @@
+import { Story, Meta, Controls } from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A simple button with a onClick handler
+
+## Primary
+
+<Story of={ButtonStories.Primary} />
+<Controls />
+
+## Icon Button
+
+<Story of={ButtonStories.IconButton} />
+
+<Controls of={ButtonStories.IconButton} />

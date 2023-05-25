@@ -1,15 +1,10 @@
 'use client';
 
-import { Atom } from '@/types/components';
 import styles from './switch.module.css';
-import { ChangeEvent } from 'react';
+import type { Atom } from '@/types/components';
+import type { SwitchProps } from './switch.types';
 
-interface Props {
-  isOn: boolean;
-  handleToggle: (event: ChangeEvent<HTMLInputElement>) => void;
-}
-
-export function Switch({ isOn, handleToggle }: Props): Atom {
+export function Switch({ isOn, handleToggle }: SwitchProps): Atom {
   return (
     <>
       <input
