@@ -12,8 +12,17 @@ export default meta;
 type Story = StoryObj<typeof Input>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
+export const NoLabel: Story = {
   args: {
     placeholder: 'e.g. Take coffee break',
+    name: 'Title',
+  },
+};
+
+export const WithLabel: Story = {
+  args: {
+    placeholder: 'E.g. Take coffee break',
+    name: 'Title',
+    label: 'Title',
   },
 };
