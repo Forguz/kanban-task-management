@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import { Select } from '@/components/common/atoms/Select';
+import { Select } from '@/components/atoms/Select';
 
 describe('Select', () => {
   it('should render with dropdown', () => {
