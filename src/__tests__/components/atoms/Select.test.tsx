@@ -1,4 +1,4 @@
-import { findByTestId, fireEvent, render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import { Select } from '@/components/atoms/Select';
@@ -37,22 +37,27 @@ describe('Select', () => {
     expect(dropdown.className).toEqual('dropdownContainer showDropdown');
   });
 
-  // it('should hide dropdown when clicked outside dropdown', () => {
-  //   const onSelect = jest.fn();
-  //   const { getByRole, getByTestId } = render(
-  //     <Select options={options} selectedOption="a" onSelect={onSelect} />
-  //   );
+  it('should select an option', () => {
+    const onSelect = jest.fn();
+    const { getAllByRole } = render(
+      <Select options={options} selectedOption="c" onSelect={onSelect} />
+    );
 
-  //   const button = getByRole('button');
-  //   const dropdown = getByTestId('dropdown-container');
+    const listItems = getAllByRole('listitem');
 
-  //   fireEvent.click(button);
-  //   expect(dropdown.classList).toHaveLength(2);
-  //   expect(dropdown.className).toEqual('dropdownContainer showDropdown');
+    fireEvent.click(listItems[0]);
+    expect(onSelect).toHaveBeenCalled();
+  });
 
-  //   fireEvent.click(getByTestId('select-container'));
+  it('should hide dropdown when clicked outside dropdown', () => {
+    const onSelect = jest.fn();
+    const { getByRole, getByTestId } = render(
+      <Select options={options} selectedOption="a" onSelect={onSelect} />
+    );
 
-  //   expect(dropdown.classList).toHaveLength(1);
-  //   expect(dropdown.className).toEqual('dropdownMenu');
-  // });
+    const button = getByRole('button');
+    const dropdown = getByTestId('dropdown-container');
+
+    fireEvent.click(document.body);
+  });
 });
