@@ -1,11 +1,15 @@
-import { fireEvent, render } from '@testing-library/react';
+import { findByTestId, fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import { Select } from '@/components/atoms/Select';
+const options = ['a', 'b', 'c', 'd', 'e', 'f'];
 
 describe('Select', () => {
   it('should render with dropdown', () => {
-    const { getByTestId } = render(<Select />);
+    const onSelect = jest.fn();
+    const { getByTestId } = render(
+      <Select options={options} selectedOption="a" onSelect={onSelect} />
+    );
 
     const selectContainer = getByTestId('select-container');
 
@@ -17,40 +21,38 @@ describe('Select', () => {
   });
 
   it('should display dropdown when button is clicked', () => {
-    const { getByRole, getByTestId } = render(<Select />);
+    const onSelect = jest.fn();
+    const { getByRole, getByTestId } = render(
+      <Select options={options} selectedOption="a" onSelect={onSelect} />
+    );
 
     const button = getByRole('button');
     const dropdown = getByTestId('dropdown-container');
 
-    expect(dropdown.classList.length).toEqual(1);
-    expect(dropdown.className).toEqual('dropdownMenu');
+    expect(dropdown.classList).toHaveLength(1);
+    expect(dropdown.className).toEqual('dropdownContainer');
 
     fireEvent.click(button);
-    expect(dropdown.classList.length).toEqual(2);
-    expect(dropdown.className).toEqual('dropdownMenu showDropdownMenu');
+    expect(dropdown.classList).toHaveLength(2);
+    expect(dropdown.className).toEqual('dropdownContainer showDropdown');
   });
 
-  it('should change button value when listItem is clicked', () => {
-    const { getByRole, getAllByRole } = render(<Select />);
+  // it('should hide dropdown when clicked outside dropdown', () => {
+  //   const onSelect = jest.fn();
+  //   const { getByRole, getByTestId } = render(
+  //     <Select options={options} selectedOption="a" onSelect={onSelect} />
+  //   );
 
-    const button = getByRole('button');
-    fireEvent.click(button);
+  //   const button = getByRole('button');
+  //   const dropdown = getByTestId('dropdown-container');
 
-    expect(button.textContent).toEqual('Sans serif');
+  //   fireEvent.click(button);
+  //   expect(dropdown.classList).toHaveLength(2);
+  //   expect(dropdown.className).toEqual('dropdownContainer showDropdown');
 
-    const listItems = getAllByRole('listitem');
-    fireEvent.click(listItems[1]);
+  //   fireEvent.click(getByTestId('select-container'));
 
-    expect(button.textContent).toEqual('Serif');
-  });
-
-  it('shoud change body font when listItem is clicked', () => {
-    const { getAllByRole } = render(<Select />);
-
-    const listItems = getAllByRole('listitem');
-
-    fireEvent.click(listItems[1]);
-
-    expect(document.body.style.fontFamily).toEqual('var(--font-serif)');
-  });
+  //   expect(dropdown.classList).toHaveLength(1);
+  //   expect(dropdown.className).toEqual('dropdownMenu');
+  // });
 });
