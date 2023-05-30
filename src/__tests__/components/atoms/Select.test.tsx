@@ -48,16 +48,4 @@ describe('Select', () => {
     fireEvent.click(listItems[0]);
     expect(onSelect).toHaveBeenCalled();
   });
-
-  it('should hide dropdown when clicked outside dropdown', () => {
-    const onSelect = jest.fn();
-    const { getByRole, getByTestId } = render(
-      <Select options={options} selectedOption="a" onSelect={onSelect} />
-    );
-
-    const button = getByRole('button');
-    const dropdown = getByTestId('dropdown-container');
-
-    fireEvent.click(document.body);
-  });
 });
