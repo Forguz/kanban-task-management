@@ -1,4 +1,4 @@
-export interface CardProps extends HTMLDivElement {
-  title: string;
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  cardTitle: string;
   subtasks: string;
 }

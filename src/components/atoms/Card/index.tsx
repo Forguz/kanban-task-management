@@ -1,11 +1,12 @@
 import { Atom } from '@/types/components';
 import { CardProps } from './card.types';
+import styles from './card.module.css';
 
-export function Card({ title, subtasks }: CardProps): Atom {
+export function Card({ cardTitle, subtasks }: CardProps): Atom {
   return (
-    <div data-testid="card-container">
-      <h3>{title}</h3>
-      <p>{subtasks}</p>
+    <div className={styles.container} data-testid="card-container">
+      <h3 className={styles.heading}>{cardTitle}</h3>
+      <p className={styles.paragraph}>{subtasks}</p>
     </div>
   );
 }

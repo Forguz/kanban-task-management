@@ -43,6 +43,33 @@ button {
   border: none;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: var(--heading-xl);
+}
+
+h2 {
+  font-size: var(--heading-l);
+}
+
+h3 {
+  font-size: var(--heading-m);
+}
+
+h4 {
+  font-size: var(--heading-s);
+}
+
+p {
+  font-size: var(--body-l);
+}
+
 a {
   color: inherit;
   text-decoration: none;

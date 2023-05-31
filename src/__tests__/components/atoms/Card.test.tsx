@@ -5,7 +5,7 @@ import { Card } from '@/components/atoms/Card';
 describe('Card', () => {
   it('should render', () => {
     const { getByTestId } = render(
-      <Card title="card" subtasks="0 out of 3 subtasks" />
+      <Card cardTitle="card" subtasks="0 out of 3 subtasks" />
     );
 
     const card = getByTestId('card-container');
