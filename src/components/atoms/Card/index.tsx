@@ -2,6 +2,7 @@ import { Atom } from '@/types/components';
 import { CardProps } from './card.types';
 import styles from './card.module.css';
 
+// will be draggable in the future
 export function Card({ cardTitle, subtasks }: CardProps): Atom {
   return (
     <div className={styles.container} data-testid="card-container">
