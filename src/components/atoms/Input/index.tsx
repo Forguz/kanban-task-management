@@ -7,7 +7,7 @@ export function Input({ placeholder, ref, name, label }: InputProps): Atom {
     <div className={styles.inputContainer}>
       {!!label && (
         <label
-          data-testId={`label-${name}`}
+          data-testid={`label-${name}`}
           className={styles.label}
           htmlFor={name}
           aria-labelledby={name}

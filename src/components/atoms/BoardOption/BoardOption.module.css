@@ -1,0 +1,35 @@
+:root {
+  --svg-gap: 8px;
+}
+
+.listItem {
+  list-style: none;
+}
+
+.container {
+  list-style: none;
+  font-size: var(--heading-m);
+  display: flex;
+  align-items: center;
+  border-radius: 0px 100px 100px 0px;
+  padding-inline-start: calc(24px - var(--svg-gap));
+  padding-inline-end: 68px;
+  padding-block: calc(16px - var(--svg-gap));
+  transition: background-color 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.containerChecked {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.input {
+  display: none;
+}
+
+.svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
