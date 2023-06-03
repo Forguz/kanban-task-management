@@ -13,6 +13,13 @@ export const Default: Story = {
   args: {
     boardName: 'BoardName',
     groupName: 'GroupName',
+  },
+};
+
+export const PreviouslyChecked: Story = {
+  args: {
+    boardName: 'BoardName',
+    groupName: 'GroupName',
     isChecked: true,
   },
 };
