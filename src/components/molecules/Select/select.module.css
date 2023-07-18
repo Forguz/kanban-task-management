@@ -1,0 +1,7 @@
+.container {
+  position: relative;
+  display: flex;
+  border: 1px solid var(--placeholder-color);
+  justify-content: flex-start;
+  border-radius: 4px;
+}

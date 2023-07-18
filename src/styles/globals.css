@@ -8,7 +8,7 @@
   --danger-color: #ea5555;
 
   /* fonts */
-  --info-font-color: #828fa3;
+  --medium-grey: #828fa3;
   --font-color: #000112;
   --placeholder-color: #828fa340;
 
@@ -33,6 +33,12 @@ body {
   background-color: var(--body-background-color);
   overflow-x: hidden;
   font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 button {

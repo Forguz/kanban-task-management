@@ -5,7 +5,7 @@
 
 .label {
   font-size: var(--body-m);
-  color: var(--info-font-color);
+  color: var(--medium-grey);
 }
 
 .input {

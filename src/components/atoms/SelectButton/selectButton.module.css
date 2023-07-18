@@ -1,0 +1,10 @@
+.button {
+  flex: 1;
+  padding-block: 8px;
+  padding-inline: 16px;
+  display: flex;
+  background-color: transparent;
+  font-size: var(--body-l);
+  justify-content: flex-start;
+  align-items: flex-start;
+}

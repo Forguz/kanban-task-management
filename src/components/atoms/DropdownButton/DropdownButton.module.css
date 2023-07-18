@@ -1,0 +1,14 @@
+.container {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h2 {
+  margin-right: 8px;
+}
+
+.container svg {
+  margin-top: 1px;
+}

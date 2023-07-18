@@ -47,7 +47,7 @@
 .option {
   cursor: pointer;
   font-size: var(--body-l);
-  color: var(--info-font-color);
+  color: var(--medium-grey);
   padding-block: var(--select-padding-block);
 }
 

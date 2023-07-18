@@ -1,0 +1,18 @@
+.header {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  padding: 16px 16px;
+}
+
+.image-spacing {
+  margin-inline-end: 16px;
+}
+
+.dropdown-box {
+  flex: 1;
+}
+
+.button-plus-spacing {
+  margin-inline-end: 16px;
+}

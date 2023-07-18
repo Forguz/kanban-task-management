@@ -1,0 +1,39 @@
+.dropdownContainer {
+  position: absolute;
+  display: none;
+  background-color: var(--background-color);
+  width: 100%;
+  border-radius: 4px;
+  top: calc(50% + 20px);
+  left: 0;
+  padding-block: 8px;
+  padding-inline: 16px;
+}
+
+.showDropdown {
+  display: flex;
+}
+
+.dropdownList {
+  list-style: none;
+  width: 100%;
+}
+
+.option {
+  cursor: pointer;
+  font-size: var(--body-l);
+  color: var(--medium-grey);
+  padding-block: 8px;
+}
+
+.option:first-child {
+  padding-block-start: 8px;
+}
+
+.option:last-child {
+  padding-block-end: 8px;
+}
+
+.option:hover {
+  color: var(--font-color);
+}

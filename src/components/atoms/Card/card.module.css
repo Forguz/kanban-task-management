@@ -12,6 +12,6 @@
 }
 
 .paragraph {
-  color: var(--info-font-color);
+  color: var(--medium-grey);
   font-size: var(--body-m);
 }

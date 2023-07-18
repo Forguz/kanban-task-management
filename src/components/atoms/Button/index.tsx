@@ -10,6 +10,7 @@ export function Button({
   disabled,
   ariaLabel = 'Button',
   name = 'Button',
+  className,
 }: ButtonProps): Atom {
   let finalStyles = styles.button;
 
@@ -19,6 +20,10 @@ export function Button({
 
   if (light) {
     finalStyles += ` ${styles.lightButton}`;
+  }
+
+  if (className) {
+    finalStyles += ` ${className}`;
   }
 
   return (
